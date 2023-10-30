@@ -201,3 +201,4 @@ window.addEventListener("scroll", function () {
   var header = document.querySelector(".our-works-inner-content-right");
   header.classList.toggle("our-works-inner-content-right-scroll", window.scrollY >2400);
 });
+

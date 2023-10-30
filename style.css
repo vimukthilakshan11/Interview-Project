@@ -11,6 +11,223 @@
 }
 
 
+
+/* card slider */
+.card-slider{
+    border: 1px solid red;
+    width: auto;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-outer{
+    border: 1px solid red;
+    width: 10px;
+    height: 600px;
+
+}
+
+
+
+
+
+
+/* end card slider */
+
+
+
+
+/* <!-- down-boc --> */
+
+.box-outer{
+    border: 1px solid red;
+    height: 350px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box-outer-outer{
+    
+    height: 350px;
+    width: 1000px;
+    background-image: url(images/bg_1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-inner{
+    margin-left: 40px;
+    width: 350px;
+}
+
+
+.get-started h4{
+    color: rgb(183, 4, 42);
+}
+.box-topic h3{
+    color: #f8f8f8;
+    font-size: 25px;
+}
+
+.desc-box p{
+    margin-top: 10px;
+    color: #818090;
+    line-height: 1.5;
+
+}
+
+.button-box button{
+    margin-top: 30px;
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    background-color: #CF012D;
+    border: none;
+    font-size: 14px;
+}
+
+
+
+/* <!-- down-boc --> */
+
+
+
+
+
+/* recent blog */
+
+.recent-blog{
+    margin-top: 200px;
+    width: auto;
+    height: 1000px;
+    background-color: #F3F3F3;
+
+}
+
+.recent-blog-outer{
+
+    height: 50px;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.recent-blog-outer h1{
+    font-weight: 800;
+    font-size: 35px;
+    margin-top: 200px;
+}
+
+
+.recent-blog-items{
+
+    display: flex;
+
+}
+
+
+.recent-blog-item{
+
+    width: 250px;
+    height: 550px;
+    margin: 15px;
+}
+
+.recent-blog-item1-image{
+    background-image: url("images/blog-1.jpg");
+    background-size: cover;
+    height: 290px;
+    width: 250px;
+    border: 10px;
+    background-position: center;
+
+    margin-top: 20px;
+
+}
+
+
+.recent-blog-item2-image{
+    background-image: url("images/blog-2.jpg");
+    background-size: cover;
+    height: 290px;
+    width: 250px;
+    border: 10px;
+    background-position: center;
+
+    margin-top: 20px;
+
+}
+
+.recent-blog-item3-image{
+    background-image: url("images/blog-3.jpg");
+    background-size: cover;
+    height: 290px;
+    width: 250px;
+    border: 10px;
+    background-position: center;
+
+    margin-top: 20px;
+
+}
+
+.recent-blog-item4-image{
+    background-image: url("images/blog-4.jpg");
+    background-size: cover;
+    height: 290px;
+    width: 250px;
+    border: 10px;
+    background-position: center;
+
+    margin-top: 20px;
+
+}
+
+.recent-blog-item .topic h2{
+    font-size: 21px;
+    font-weight: 550;
+}
+
+
+.recent-blog-item .image-des h2{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+
+
+.I{
+    background-image: url("images/speech-bubble.png");
+    background-size: cover;
+    height: 7px;
+    width: 7px;
+
+
+}
+
+.recent-blog-item .des{
+    color: #686868;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.recent-blog-topic{
+    margin-bottom: 50px;
+}
+
+/* end recent blog */
+
 .ivright h4{
     font-size: 13px;
     color: #808067;
@@ -1252,6 +1469,13 @@ img {
 
 @media screen and (max-width: 600px) {
 
+/* rexent blog */
+
+.recent-blog-items{
+flex-direction: column;
+
+}
+/* end rexent blog */
 
 
     /* mobile our worker area */
