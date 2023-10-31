@@ -13,23 +13,132 @@
 
 
 /* card slider */
-.card-slider{
-    border: 1px solid red;
+.card-slider {
     width: auto;
     height: 700px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
-.card-outer{
-    border: 1px solid red;
-    width: 10px;
-    height: 600px;
+.card-outer {
+    width: 1100px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 40px;
+    overflow: hidden;
+    border-right: -30px;
 
+
+    
+}
+
+.cards-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    
+    height: 700px;
+
+    
+}
+
+.s-card {
+    width: 330px;
+    height: 300px;
+    background-color: #F3F3F3;
+    margin-right: 40px;
+    display: flex;
+flex-direction: column;
+    cursor: grab;
+    
+}
+
+.fa-quote-left {
+    font-size: 45px;
+    color: #D1002C;
+    margin-top: -20px;
+}
+
+.card-outer .buttons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.card-outer-topic{
+    margin-bottom: 100px;
+}
+
+.card-outer-topic h2{
+    font-size: 35px;
+    font-weight: 800;
+    width: 370px;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.s-card h1{
+    color: #A5ACC4 !important;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+.bot-img{
+    background-image: url(images/client-1.jpg);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    width: 90px;
+    height: 90px;
+    margin-top: -20px;
+}
+
+.card-bot{
+    display: flex;
+    margin: 20px;
+    
+}
+
+.bot-name{
+    width: 250px;
+    line-height: 0.5;
+    display: flex;
+    flex-direction: column;
+}
+.bot-name h1{
+    line-height: 1.3;
+}
+
+.bot-name h2{
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.dot{
+    background-color: rgb(143, 148, 146) !important;
+    border: 1px solid gray ;
+    
 }
 
 
 
+.card-outer .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.card-outer .dot.active {
+    background-color: #D1002C;
+}
 
 
 
@@ -41,7 +150,7 @@
 /* <!-- down-boc --> */
 
 .box-outer{
-    border: 1px solid red;
+   
     height: 350px;
     width: auto;
     display: flex;

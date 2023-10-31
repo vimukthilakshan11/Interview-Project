@@ -154,7 +154,7 @@ window.addEventListener("scroll", function () {
 
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".our-works-inner-content-right");
-  header.classList.toggle("our-works-inner-content-right-scroll", window.scrollY > 1100);
+  header.classList.toggle("our-works-inner-content-right-scroll", window.scrollY > 1400);
 });
 
 window.addEventListener("scroll", function () {
@@ -220,3 +220,93 @@ window.addEventListener("scroll", function () {
   var header = document.querySelector(".icons");
   header.classList.toggle("icons-scroll-mobile", window.scrollY > 11900);
 });
+
+
+
+
+
+// card slider
+
+
+
+
+const cardsSlide = document.querySelector(".cards-slide");
+const dots = document.querySelectorAll(".dot");
+const cardWidth = 330; // Adjust to match your card width
+let currentCardIndex = 0;
+let isDragging = false;
+let startPosition = 0;
+let currentTranslate = 0;
+
+dots[currentCardIndex].classList.add("active");
+
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+        moveToCard(index);
+    });
+});
+
+cardsSlide.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startPosition = e.clientX;
+    currentTranslate = -currentCardIndex * cardWidth;
+    cardsSlide.style.transition = "none";
+});
+
+cardsSlide.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        const dragAmount = e.clientX - startPosition;
+        cardsSlide.style.transform = `translateX(${currentTranslate + dragAmount}px)`;
+    }
+});
+
+cardsSlide.addEventListener("mouseup", () => {
+    if (isDragging) {
+        const dragThreshold = cardWidth / 4;
+        const dragAmount = e.clientX - startPosition;
+
+        if (dragAmount > dragThreshold) {
+            slidePrev();
+        } else if (dragAmount < -dragThreshold) {
+            slideNext();
+        } else {
+            moveToCard(currentCardIndex);
+        }
+
+        isDragging = false;
+    }
+});
+
+cardsSlide.addEventListener("mouseleave", () => {
+    if (isDragging) {
+        moveToCard(currentCardIndex);
+        isDragging = false;
+    }
+});
+
+
+function moveToCard(index) {
+    currentCardIndex = index;
+    const xOffset = -index * cardWidth;
+    cardsSlide.style.transform = `translateX(${xOffset}px)`;
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+    });
+}
+
+function slideNext() {
+    if (currentCardIndex < dots.length - 1) {
+        moveToCard(currentCardIndex + 1);
+    }
+}
+
+function slidePrev() {
+    if (currentCardIndex > 0) {
+        moveToCard(currentCardIndex - 1);
+    }
+}
+
+
+
+// card slider end
