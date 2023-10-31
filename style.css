@@ -2,7 +2,6 @@
 
 
 
-/* 1 */
 * {
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
@@ -1172,7 +1171,6 @@ header ul li a {
     position: relative;
     width: 100%;
 
-    /* darckblue */
 
 }
 
@@ -1266,12 +1264,12 @@ header ul li a {
 
 @-webkit-keyframes posi {
     from {
-        /* top: 43%; */
+        
         opacity: 0;
     }
 
     to {
-        /* top: 39%; */
+        
         opacity: 1;
     }
 }
@@ -1279,12 +1277,12 @@ header ul li a {
 
 @keyframes posi {
     from {
-        /* top: 43%; */
+        
         opacity: 0;
     }
 
     to {
-        /* top: 39%; */
+        
         opacity: 1;
     }
 }
@@ -1337,7 +1335,6 @@ header ul li a {
 .txt h1 {
 
     color: #ffffff;
-    /* blue */
     font-size: 35px;
     margin-bottom: 20px;
     font-weight: 800;
@@ -1352,7 +1349,6 @@ header ul li a {
     letter-spacing: 1px;
 }
 
-/* /3 */
 
 
 .left-button button {
@@ -1430,7 +1426,6 @@ img {
     }
 }
 
-/* /4 */
 
 .header-bottom {
 
@@ -1786,6 +1781,23 @@ img {
 
 
 @media screen and (max-width: 600px) {
+
+
+
+
+
+    .header{
+        display: none;
+    }
+
+
+    header{
+width: 400px;
+    }
+.mobile-nav-header{
+    background-color: white;
+}
+
 
     .s-card {
        
@@ -2508,12 +2520,8 @@ flex-direction: column;
         font-size: 13px;
     }
 
-}
 
-/* /5 */
 
-/* 6 */
-@media screen and (max-width: 520px) {
     .txt h1 {
         font-size: 30px;
         margin-bottom: 20px;
@@ -2526,6 +2534,6 @@ flex-direction: column;
     .sign a {
         font-size: 12px;
     }
+
 }
 
-/* /6 */

@@ -150,80 +150,64 @@ window.addEventListener("scroll", function () {
   );
 });
 
-
-
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".our-works-inner-content-right");
-  header.classList.toggle("our-works-inner-content-right-scroll", window.scrollY > 1400);
+  header.classList.toggle(
+    "our-works-inner-content-right-scroll",
+    window.scrollY > 1400
+  );
 });
 
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".our-works-inner-content-right-left");
-  header.classList.toggle("our-works-inner-content-right-left-scroll", window.scrollY > 1700);
+  header.classList.toggle(
+    "our-works-inner-content-right-left-scroll",
+    window.scrollY > 1700
+  );
 });
-
-
-
 
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".part3list");
   header.classList.toggle("part3list-scroll", window.scrollY > 2200);
 });
 
-
-
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".list-item-4");
   header.classList.toggle("list-item-4-scroll", window.scrollY > 2700);
 });
-
-
 
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".list-item5");
   header.classList.toggle("list-item5-scroll", window.scrollY > 3200);
 });
 
-
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".list-item6");
   header.classList.toggle("list-item6-scroll", window.scrollY > 3650);
 });
 
-
-
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".our-works-topic-inner");
-  header.classList.toggle("our-works-topic-inner-scroll", window.scrollY > 1400);
+  header.classList.toggle(
+    "our-works-topic-inner-scroll",
+    window.scrollY > 1400
+  );
 });
-
-
-
 
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".recent-blog-items");
   header.classList.toggle("recent-blog-items-scroll", window.scrollY > 5900);
 });
 
-
-
-
-
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".icons");
   header.classList.toggle("icons-scroll", window.scrollY > 7100);
 });
 
-
-
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".icons");
   header.classList.toggle("icons-scroll-mobile", window.scrollY > 11900);
 });
-
-
-
-
 
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".cards-slide");
@@ -231,12 +215,9 @@ window.addEventListener("scroll", function () {
 });
 // card slider
 
-
-
-
 const cardsSlide = document.querySelector(".cards-slide");
 const dots = document.querySelectorAll(".dot");
-const cardWidth = 430; // Adjust to match your card width
+const cardWidth = 430;
 let currentCardIndex = 0;
 let isDragging = false;
 let startPosition = 0;
@@ -245,72 +226,71 @@ let currentTranslate = 0;
 dots[currentCardIndex].classList.add("active");
 
 dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        moveToCard(index);
-    });
+  dot.addEventListener("click", () => {
+    moveToCard(index);
+  });
 });
 
 cardsSlide.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startPosition = e.clientX;
-    currentTranslate = -currentCardIndex * cardWidth;
-    cardsSlide.style.transition = "none";
+  isDragging = true;
+  startPosition = e.clientX;
+  currentTranslate = -currentCardIndex * cardWidth;
+  cardsSlide.style.transition = "none";
 });
 
 cardsSlide.addEventListener("mousemove", (e) => {
-    if (isDragging) {
-        const dragAmount = e.clientX - startPosition;
-        cardsSlide.style.transform = `translateX(${currentTranslate + dragAmount}px)`;
-    }
+  if (isDragging) {
+    const dragAmount = e.clientX - startPosition;
+    cardsSlide.style.transform = `translateX(${
+      currentTranslate + dragAmount
+    }px)`;
+  }
 });
 
 cardsSlide.addEventListener("mouseup", () => {
-    if (isDragging) {
-        const dragThreshold = cardWidth / 4;
-        const dragAmount = e.clientX - startPosition;
+  if (isDragging) {
+    const dragThreshold = cardWidth / 4;
+    const dragAmount = e.clientX - startPosition;
 
-        if (dragAmount > dragThreshold) {
-            slidePrev();
-        } else if (dragAmount < -dragThreshold) {
-            slideNext();
-        } else {
-            moveToCard(currentCardIndex);
-        }
-
-        isDragging = false;
+    if (dragAmount > dragThreshold) {
+      slidePrev();
+    } else if (dragAmount < -dragThreshold) {
+      slideNext();
+    } else {
+      moveToCard(currentCardIndex);
     }
+
+    isDragging = false;
+  }
 });
 
 cardsSlide.addEventListener("mouseleave", () => {
-    if (isDragging) {
-        moveToCard(currentCardIndex);
-        isDragging = false;
-    }
+  if (isDragging) {
+    moveToCard(currentCardIndex);
+    isDragging = false;
+  }
 });
 
-
 function moveToCard(index) {
-    currentCardIndex = index;
-    const xOffset = -index * cardWidth;
-    cardsSlide.style.transform = `translateX(${xOffset}px)`;
+  currentCardIndex = index;
+  const xOffset = -index * cardWidth;
+  cardsSlide.style.transform = `translateX(${xOffset}px)`;
 
-    dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-    });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
 }
 
 function slideNext() {
-    if (currentCardIndex < dots.length - 1) {
-        moveToCard(currentCardIndex + 1);
-    }
+  if (currentCardIndex < dots.length - 1) {
+    moveToCard(currentCardIndex + 1);
+  }
 }
 
 function slidePrev() {
-    if (currentCardIndex > 0) {
-        moveToCard(currentCardIndex - 1);
-    }
+  if (currentCardIndex > 0) {
+    moveToCard(currentCardIndex - 1);
+  }
 }
-
-
 
 // card slider end
