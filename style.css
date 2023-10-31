@@ -22,7 +22,7 @@
 }
 
 .card-outer {
-    width: 1100px;
+    width: 950px;
     height: 700px;
     display: flex;
     flex-direction: column;
@@ -40,13 +40,14 @@
     transition: transform 0.5s ease;
     
     height: 700px;
+    margin-left: 30px;
 
     
 }
 
 .s-card {
-    width: 330px;
-    height: 300px;
+    width: 300px;
+    height: 270px;
     background-color: #F3F3F3;
     margin-right: 40px;
     display: flex;
@@ -82,7 +83,7 @@ flex-direction: column;
 
 .s-card h1{
     color: #A5ACC4 !important;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 500;
     margin: 20px;
     line-height: 1.6;
@@ -93,9 +94,9 @@ flex-direction: column;
     border-radius: 50%;
     background-size: cover;
     background-position: center;
-    width: 90px;
-    height: 90px;
-    margin-top: -20px;
+    width: 70px;
+    height: 70px;
+    margin-top: -10px;
 }
 
 .card-bot{
@@ -214,6 +215,7 @@ flex-direction: column;
 /* recent blog */
 
 .recent-blog{
+
     margin-top: 200px;
     width: auto;
     height: 1200px;
@@ -1402,6 +1404,7 @@ img {
 
 }
 
+
 @-webkit-keyframes zoomin {
     from {
         transform: scale(1, 1);
@@ -1525,6 +1528,12 @@ img {
     animation: slideUp 1s ease;
 
 }
+
+
+.cards-slide-scroll{
+    animation: slideUp 1s ease;
+}
+
 
 @keyframes slideUp {
     from {
@@ -1777,6 +1786,13 @@ img {
 
 
 @media screen and (max-width: 600px) {
+
+    .s-card {
+       
+        margin-left: 10px;
+    
+        
+    }
 
     .footer-down h3{
         margin: 30px;

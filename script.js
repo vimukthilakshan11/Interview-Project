@@ -225,6 +225,10 @@ window.addEventListener("scroll", function () {
 
 
 
+window.addEventListener("scroll", function () {
+  var header = document.querySelector(".cards-slide");
+  header.classList.toggle("cards-slide-scroll", window.scrollY > 4500);
+});
 // card slider
 
 
@@ -232,7 +236,7 @@ window.addEventListener("scroll", function () {
 
 const cardsSlide = document.querySelector(".cards-slide");
 const dots = document.querySelectorAll(".dot");
-const cardWidth = 330; // Adjust to match your card width
+const cardWidth = 430; // Adjust to match your card width
 let currentCardIndex = 0;
 let isDragging = false;
 let startPosition = 0;
