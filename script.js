@@ -197,8 +197,26 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("our-works-topic-inner-scroll", window.scrollY > 1400);
 });
 
+
+
+
 window.addEventListener("scroll", function () {
-  var header = document.querySelector(".our-works-inner-content-right");
-  header.classList.toggle("our-works-inner-content-right-scroll", window.scrollY >2400);
+  var header = document.querySelector(".recent-blog-items");
+  header.classList.toggle("recent-blog-items-scroll", window.scrollY > 5900);
 });
 
+
+
+
+
+window.addEventListener("scroll", function () {
+  var header = document.querySelector(".icons");
+  header.classList.toggle("icons-scroll", window.scrollY > 7100);
+});
+
+
+
+window.addEventListener("scroll", function () {
+  var header = document.querySelector(".icons");
+  header.classList.toggle("icons-scroll-mobile", window.scrollY > 11900);
+});

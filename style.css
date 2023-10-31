@@ -107,8 +107,10 @@
 .recent-blog{
     margin-top: 200px;
     width: auto;
-    height: 1000px;
+    height: 1200px;
     background-color: #F3F3F3;
+    margin-top: -200px;
+    margin-bottom: 100px;
 
 }
 
@@ -123,8 +125,8 @@
 
 }
 .recent-blog-outer h1{
-    font-weight: 800;
-    font-size: 35px;
+    font-weight: 1000;
+    font-size: 40px;
     margin-top: 200px;
 }
 
@@ -168,6 +170,8 @@
 
 }
 
+
+
 .recent-blog-item3-image{
     background-image: url("images/blog-3.jpg");
     background-size: cover;
@@ -207,6 +211,46 @@
 
 
 
+
+.recent-blog-items-scroll{
+    
+    animation: slideUpMobnk 1s ease;
+}
+
+
+.icons-scroll{
+    animation: slideUpMobnk 1.5s ease;
+}
+
+
+.icons-scroll-mobile{
+    animation: slideUpMobnk 1.5s ease;
+}
+
+
+
+
+
+
+
+@keyframes slideUpMobnk {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+
 .I{
     background-image: url("images/speech-bubble.png");
     background-size: cover;
@@ -227,6 +271,162 @@
 }
 
 /* end recent blog */
+
+.line{
+    margin-top: 100px;
+    width: auto;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(100% 0, 100% 100%, 41% 42%, 20% 42%, 0 100%, 0 0);
+
+}
+
+
+
+/* footer */
+footer{
+    width: auto;
+    height: 600px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.icons{
+    display: flex;
+    margin: 30px;
+}
+
+.icon-1{
+background-image: url("images/twitter-64.png");
+background-size: cover;
+height: 20px;
+width: 20px;
+display: flex;
+
+
+}
+.icon-u{
+    height: 40px;
+width: 40px;
+background-color: #272727;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 5px;
+}
+.icon-2{
+    background-image: url("images/twitter-64.png");
+background-size: cover;
+height: 20px;
+width: 20px;
+display: flex;
+}
+
+.icon-3{
+    background-image: url("images/facebook-64.png");
+background-size: cover;
+height: 20px;
+width: 20px;
+display: flex;
+}
+
+.footer-up-item-upper h2{
+    font-weight: 400px;
+    font-size: 25px;
+}
+
+.footer-up-item-middle h2{
+    color: #bebeba;
+    font-size: 19px;
+    font-weight: 500;
+    margin: 30px 0 30px 0;
+    line-height: 1.5;
+}
+
+
+.footer{
+   
+    width: auto;
+    height: 420px;
+    color: white;
+
+}
+
+.footer-up{
+   
+    width: auto;
+    display: flex;
+
+}
+
+.footer-down{
+   
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.community-item{
+    margin-top: 30px;
+}
+.community-item .i{
+    color: #B3B3B3;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.footer-down h3{
+    
+    color: #B3B3B3;
+    font-weight: 600;
+    
+
+}
+
+.footer-up-item-middle{
+    padding-right: 50px;
+}
+
+.footer-down h3 span{
+    
+    color: #CF012D;
+
+}
+
+
+.footer-up-item{
+    
+    height: 300px;
+    width: 250px;
+}
+
+
+
+.line2{
+    width: auto;
+    height: 200px;
+    background-color: #1b1111;
+    clip-path: polygon(100% 100%, 100% 0, 78% 59%, 64% 60%, 0 0, 0 100%);
+    margin-top: -250px;
+   
+}
+
+.map{
+    display: flex;
+    
+}
+
+/* end footer */
+
+
 
 .ivright h4{
     font-size: 13px;
@@ -1468,6 +1668,45 @@ img {
 
 
 @media screen and (max-width: 600px) {
+
+    .footer-down h3{
+        margin: 30px;
+        text-align: center;
+        font-size: 15px;
+
+    }
+
+
+    footer{
+
+        height: 1600px;
+        
+        
+    }
+    
+
+    .line2{
+       
+        height: 100px;
+        margin-top: 1500px;
+        clip-path: polygon(71% 54%, 100% 0, 100% 100%, 0 100%, 0 0);
+
+       
+    }
+
+    .line{
+        height: 100px;
+        margin-top: 0;
+        clip-path: polygon(34% 64%, 100% 100%, 100% 0, 0 0, 0 100%);
+    }
+    
+
+
+    .footer-up{
+        
+        flex-direction: column;
+        margin-left: 20px;
+    }
 
 /* rexent blog */
 
