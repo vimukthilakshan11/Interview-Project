@@ -13,6 +13,7 @@
 
 /* card slider */
 .card-slider {
+    margin-top: 300px;
     width: auto;
     height: 700px;
     display: flex;
@@ -523,7 +524,7 @@ display: flex;
 .line2{
     width: auto;
     height: 200px;
-    background-color: #1b1111;
+    background-color: #000000;
     clip-path: polygon(100% 100%, 100% 0, 78% 59%, 64% 60%, 0 0, 0 100%);
     margin-top: -250px;
    
@@ -552,6 +553,7 @@ display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #F3F3F3;
+    margin-top: 300px;
 
 
 }
@@ -562,7 +564,7 @@ display: flex;
     display: flex;
     background-color: rgb(255, 255, 255);
     clip-path: polygon(67% 87%, 82% 87%, 100% 0, 100% 100%, 0 100%, 0 0);
-    margin-top: -90px;
+    margin-top: -100px;
     
 }
 
@@ -582,6 +584,8 @@ display: flex;
 
 .our-works-inner-content {
     display: flex;
+    
+    
 }
 
 .our-works-inner-content-outer {
@@ -590,6 +594,7 @@ display: flex;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
 }
 
@@ -812,6 +817,7 @@ display: flex;
 .container {
     width: 100%;
     margin: auto;
+    width: auto;
 }
 
 .navbar {
@@ -819,7 +825,7 @@ display: flex;
     display: flex;
     width: 1100px;
     margin-left: 160px;
-    margin-right: 100px;
+
     height: 60px;
 
 
@@ -1041,15 +1047,15 @@ header ul li a {
 }
 
 .navbar-outer {
-
-    margin-left: 300px;
-    margin-right: 250px;
+    width: auto;
     top: 50px;
     display: flex;
     position: absolute;
     justify-content: center;
     text-align: center;
     z-index: 1;
+    left: 0;
+    right: 0;
 }
 
 
@@ -1059,7 +1065,7 @@ header ul li a {
     display: flex;
     justify-content: end;
     margin-left: 200px;
-    align-items: start;
+    align-items: center;
 }
 
 
@@ -1069,7 +1075,7 @@ header ul li a {
     display: flex;
     justify-content: end;
     margin-left: 200px;
-    align-items: start;
+    align-items: center;
 }
 
 .nav-left span {
@@ -1182,6 +1188,8 @@ header ul li a {
     background-size: cover;
     height: 100vh;
     top: -50px;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -1293,7 +1301,7 @@ header ul li a {
 
     flex: 1;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .count-number h1 {
@@ -1489,6 +1497,7 @@ img {
 .aboutus-outer {
 
 
+    margin-top: 300px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -1568,13 +1577,7 @@ img {
     animation: slideUp 1s ease;
 }
 
-.our-works-header{
-    width: auto;
-    height: 90px;
-    background-color: rgb(255, 255, 255);
-    clip-path: polygon(100% 0, 100% 91%, 33% 24%, 0 94%, 0 0);
-    margin-bottom: -60px;
-}
+
 
 /* out works animation end */
 
@@ -1733,7 +1736,8 @@ img {
 
     display: none;
     height: 100px;
-    margin-top: 240px;
+    margin-top: 310px;
+    margin-bottom: 200px;
 }
 
 .two {
@@ -1862,8 +1866,10 @@ flex-direction: column;
 
 
 .our-works-outer{
+    
     width: auto;
     height: 5800px;
+    
 
 
 }
@@ -2036,6 +2042,7 @@ flex-direction: column;
     }
 
     .aboutus-bottom-mobile-upper {
+
 
         width: auto;
         height: 400px;
@@ -2464,7 +2471,11 @@ flex-direction: column;
     }
 
     .navbar-outer {
+        
         display: none;
+        justify-content: center;
+        align-items: center;
+        right: 0;
     }
 
 
